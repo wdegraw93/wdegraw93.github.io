@@ -57,8 +57,6 @@
             <hr class="m-0" />
             
             
-            
-            
             <!-- Portfolio -->
             <section class="resume-section" id="portfolio">
                 <div class="resume-section-content">
@@ -68,7 +66,15 @@
                             <h3 class="mb-0">Event Reconstruction in He6-CRES with Faster R-CNN</h3>
                             <div class="subheading mb-3"><a href="https://github.com/wdegraw93/he6-cres-deep-learning" target=_blank>Github Repo</a></div>
                             <img src="img/good_preds.png" width="450" height="250">
-                            <p>Created a simulation and modeling pipeline to study the possibility of using Computer Vision techniques in the analysis of spectrogram data for the He6-CRES experiment at the University of Washington.</p>
+                            <p>
+                                The <a href = "http://faculty.washington.edu/agarcia3/Chirality-flipping/He6-CRES/">He6-CRES</a> experiment at the University of Washington is a search for physics beyond the Standard Model by studying nuclear beta decay. 
+                                The data comes in the form of spectrogram 'images' where events are seen as line segments broken up into discontinuous 'tracks'. The goal of this project is to see if a computer vision model can help in the identification of events in the experiment.
+                           <br> To accomplish this I first edited an existing CRES data simulation to include the output of ground-truth boundary boxes for events. I then wrote a PyTorch-Lightning framework for loading the data and training a
+                                Faster R-CNN object detection model. I also made use of an AWS GPU instance to accelerate the work. 
+                           <br> The model ended up working very well (a very good example spectrogram is shown above). The mean Intersection over Union (IoU) of the predicted boundary boxes to the targets achieved is over .8. This was no hyperparameter fine-tuning as the purpose of the project
+                                was to establish whether the method is worth exploring for a future graduate student. The framework produced here could be used as the basis for a larger analysis of reconstructing CRES events with object
+                                detection R-CNN's, or with some work could be used to begin working with an instance segmentation Mask R-CNN model.
+                            </p>
                         </div>
             </section>
             <hr class="m-0" />
