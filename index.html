@@ -73,7 +73,7 @@
                                 The data comes in the form of spectrogram 'images' where events are seen as line segments broken up into discontinuous 'tracks'. The goal of this project is to see if a computer vision model can help in the identification of events in the experiment.
                        <br><br> To accomplish this I first edited an existing CRES data simulation to include the output of ground-truth boundary boxes for events. I then wrote a PyTorch-Lightning framework for loading the data and training a
                                 Faster R-CNN object detection model. I also made use of an AWS GPU instance to accelerate the work. 
-                       <br><br> The model ended up working very well (a very good example spectrogram is shown above). The mean Intersection over Union (IoU) of the predicted boundary boxes to the targets achieved is over .8. This was no hyperparameter fine-tuning as the purpose of the project
+                       <br><br> The model ended up working very well (a very good example spectrogram is shown above). The mean Intersection over Union (IoU) of the predicted boundary boxes to the targets achieved is over .8. There was no hyperparameter fine-tuning as the purpose of the project
                                 was to establish whether the method is worth exploring for a future graduate student. The framework produced here could be used as the basis for a larger analysis of reconstructing CRES events with object
                                 detection R-CNN's, or with some work could be used to begin working with an instance segmentation Mask R-CNN model.
                             </p>
@@ -110,9 +110,9 @@
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Can we tell what makes a stupid question with Reddit?</h3>
                             <div class="subheading mb-3"><a href="https://github.com/wdegraw93/subreddit_classification" target=_blank>Github Repo</a></div>
-                            <img src="img/aqi_lbw_img.png" width="250" height="350">
+                            <img src="img/reddit.png" width="250" height="250">
                             <p>
-                                Note: There's no such thing as a stupid question<br><br>
+                                <b>Note: There's no such thing as a stupid question</b><br><br>
                                 Using post data from r/NoStupidQuestions and r/AskReddit, and under the assumption that people posting to r/NoStupidQuestions believe the question
                                 they are asking is stupid, I aimed to set out if a classification model could distinguish between posts coming from the two subreddits and tell us 
                                 what makes a question 'stupid'.<br><br>
