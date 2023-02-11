@@ -84,8 +84,8 @@
                     <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Classifying excess Low Birth Weight Incidence with Air Quality Data</h3>
-                            <div class="subheading mb-3"><a href="https://github.com/wdegraw93/he6-cres-deep-learning" target=_blank>Github Repo</a></div>
-                            <img src="img/aqi_lbw_img.png" width="250" height="450">
+                            <div class="subheading mb-3"><a href="https://github.com/wdegraw93/low_birth_weight_vs_aqi_study" target=_blank>Github Repo</a></div>
+                            <img src="img/aqi_lbw_img.png" width="250" height="350">
                             <p>
                                 In this group project we sought to describe a link between air quality at the county level and excess in the rate of low birth weight (LBW) infants in that county. 
                                 Using the EPA's <a href="https://www.epa.gov/aqs">Air Quality System</a> (AQS) API we scraped 15 years of data on the levels of O<sub>3</sub>, PM2.5, PM10, CO, and NO<sub>2</sub> in the air to predict 
@@ -101,6 +101,26 @@
                                 data for both categories and using the prior 9 months of air quality data to predict LBW in the following month. However, it was also clear that we were dealing
                                 with very much missing data, since only 7% of the data of what was originally scraped was usable. 
                                 
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Reddit NLP Classification -->
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Can we tell what makes a stupid question with Reddit?</h3>
+                            <div class="subheading mb-3"><a href="https://github.com/wdegraw93/subreddit_classification" target=_blank>Github Repo</a></div>
+                            <img src="img/aqi_lbw_img.png" width="250" height="350">
+                            <p>
+                                Note: There's no such thing as a stupid question<br><br>
+                                Using post data from r/NoStupidQuestions and r/AskReddit, and under the assumption that people posting to r/NoStupidQuestions believe the question
+                                they are asking is stupid, I aimed to set out if a classification model could distinguish between posts coming from the two subreddits and tell us 
+                                what makes a question 'stupid'.<br><br>
+                                Using the PushShift API I scraped close to 30k total posts from the subreddits, for a baseline accuracy close to 50%. Using NLP vectorization techniques
+                                I prepared the data for input into several classification models to find the best performer. I also included the post length as in EDA it was shown that
+                                it was very different between the two subreddits. All models struggled with over-fitting but eventually I found a good balance with a random forest 
+                                classifier that gave 77% accuracy. It turns out there is some predictive power in these subreddit posts for what makes a stupid question! 
+                                I also included a streamlit app in the repo so that one can find out (with 77% accuracy) if their question is stupid or not!
                             </p>
                         </div>
                     </div>
